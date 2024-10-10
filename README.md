@@ -2,11 +2,11 @@
 Notifications Service | Ignite-Lab - NodeJS
 </h1>
 
-<h2 align="center">
+<h4 align="center">
   <div>
     <img alt="Logo" title="#logo" src="public/ignite-lab.svg" width="200"/>
   <div>
-</h2>
+</h4>
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
