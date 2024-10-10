@@ -10,8 +10,10 @@ Notifications Service | Ignite-Lab - NodeJS
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades-do-projeto">Funcionalidades do projeto</a> •
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-endpoints">Endpoints</a> • 
  <a href="#-autor">Autor</a> • 
  <a href="#user-content--licença">Licença</a>
 </p>
@@ -27,6 +29,11 @@ Aplicação desenvolvida com base nos princípios de TDD (Test-Driven Developmen
 Para a comunicação com o banco de dados, foi utilizado o TypeORM Prisma, uma API flexível e adaptável para diferentes cenários, como REST APIs, CLIs, microservices e GraphQL APIs.
 </p>
 
+## 🔨 Funcionalidades do projeto
+
+- `Listar notificações`: Retorna todas as notificações registradas no banco.
+- `Criar notificações`: Registra novas notificações.
+
 ## 🛠 Tecnologias
 
 <p align="justify">Este projeto utiliza um conjunto de tecnologias modernas para garantir uma aplicação eficiente e escalável, incluindo:</p>
@@ -38,7 +45,6 @@ Para a comunicação com o banco de dados, foi utilizado o TypeORM Prisma, uma A
   * [Jest](https://jestjs.io/)
   * [Redis](https://redis.io/)
 
-
 ## 🚀 Como executar o projeto
 
 ### Pré-requisitos
@@ -46,7 +52,7 @@ Para a comunicação com o banco de dados, foi utilizado o TypeORM Prisma, uma A
 <p align="justify">Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:</p>
 
 ```bash
-    npm i -g @nestjs/cli
+npm i -g @nestjs/cli
 ```
 
 <a href="https://skillicons.dev">
@@ -84,8 +90,19 @@ $ yarn test:watch
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
+## ⚙️ Endpoints
 
-# 🧑🏻‍💻 Autor
+### 1. Criar notificações
+- **Método**: POST
+- **URL**: `/notifications`
+- **Corpo**:
+  ```json
+  {
+    "name": "string",
+    "email": "string"
+  }
+
+## 🧑🏻‍💻 Autor
 
 Feito com ❤️ por Gelzieny R. Martins 👋🏽 [Entre em contato!](https://www.linkedin.com/in/gelzieny/)
 
