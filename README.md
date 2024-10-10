@@ -1,5 +1,6 @@
-"# notifications-service" 
-
+<h1 align="center">
+Notifications Service | Ignite-Lab - NodeJS
+</h1>
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
