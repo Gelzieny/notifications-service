@@ -98,9 +98,9 @@ $ yarn test:watch
 - **Corpo**:
   ```json
   {
-    "content": string,
-    "category": string,
-    "recipientId": string
+    "content": "string",
+    "category": "string",
+    "recipientId": "string"
   }
 
 ## 🧑🏻‍💻 Autor
