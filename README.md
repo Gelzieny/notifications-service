@@ -31,8 +31,11 @@ Para a comunicação com o banco de dados, foi utilizado o TypeORM Prisma, uma A
 
 ## 🔨 Funcionalidades do projeto
 
-- `Listar notificações`: Retorna todas as notificações registradas no banco.
+- `Listar notificações`: Retorna todas as notificações registradas no banco por recipiente id.
 - `Criar notificações`: Registra novas notificações.
+- `Cancelar notificações`: Cancelar notificações registrada.
+- `Contador de notificações`: Conta quantas notificações registrada.
+- `Ler e não de notificações`:Possibilidade de marcar uma notificação como lida ou deixá-la como não lida.
 
 ## 🛠 Tecnologias
 
