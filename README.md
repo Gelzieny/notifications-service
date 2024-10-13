@@ -98,8 +98,9 @@ $ yarn test:watch
 - **Corpo**:
   ```json
   {
-    "name": "string",
-    "email": "string"
+    "content": "string",
+    "category": "string",
+    "recipientId": "string"
   }
 
 ## 🧑🏻‍💻 Autor
