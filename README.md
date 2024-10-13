@@ -107,8 +107,6 @@ $ yarn test:watch
 
 Feito com ❤️ por Gelzieny R. Martins 👋🏽 [Entre em contato!](https://www.linkedin.com/in/gelzieny/)
 
-
-
 ## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).

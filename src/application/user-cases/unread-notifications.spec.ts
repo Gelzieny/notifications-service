@@ -1,32 +1,32 @@
 import { InMemoryNotificationsRepository } from "@test/repositories/in-memory-notifications-repository";
-import { CancelNotification } from "./cancel-notification";
 import { NoticationNotFound } from "./errors/notication-not-found";
 import { makeNotification } from "@test/factories/notification-factory";
+import { UnReadNotification } from "./unread-notifications";
 
-describe('Cancel notification', () => {
-    it('should be able to send a notification', async () => {
+describe('UnRead notification', () => {
+    it('should be able to unread a notification', async () => {
         const notificationsRepository = new InMemoryNotificationsRepository();
-        const cancelNotification = new CancelNotification(notificationsRepository);
+        const unreadNotification = new UnReadNotification(notificationsRepository);
 
-        const notification = makeNotification();
+        const notification = makeNotification({
+            readAt: new Date()
+        });
 
         await notificationsRepository.create(notification);
 
-        await cancelNotification.execute({
+        await unreadNotification.execute({
             notificationId: notification.id
         });
 
-        expect(notificationsRepository.notifications[0].canceledAt).toEqual(
-            expect.any(Date)
-        );
+        expect(notificationsRepository.notifications[0].readAt).toBeNull()
     });
 
-    it('should not be able to cancel a non notification', async () => {
+    it('should not be able to read a non notification', async () => {
         const notificationsRepository = new InMemoryNotificationsRepository();
-        const cancelNotification = new CancelNotification(notificationsRepository);
+        const unreadNotification = new UnReadNotification(notificationsRepository);
 
         expect(() => {
-            return cancelNotification.execute({
+            return unreadNotification.execute({
                 notificationId: 'fake-notification-id'
             });
         }).rejects.toThrow(NoticationNotFound);
