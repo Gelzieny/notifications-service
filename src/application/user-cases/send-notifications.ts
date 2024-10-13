@@ -16,20 +16,21 @@ interface SendNotificationResponse {
 @Injectable()
 export class SendNotification {
     constructor(private notificationsRepository: NotificationsRepository) { }
-
-    async execute(request: SendNotificationRequest): Promise<SendNotificationResponse> {
-        const { recipientId, content, category } = request;
+    async execute(
+        request: SendNotificationRequest,
+    ): Promise<SendNotificationResponse> {
+        const { category, content, recipientId } = request;
 
         const notification = new Notification({
             recipientId,
             content: new Content(content),
-            category
+            category,
         });
 
         await this.notificationsRepository.create(notification);
 
         return {
-            notification
+            notification,
         };
     }
 }

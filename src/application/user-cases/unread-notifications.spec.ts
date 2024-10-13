@@ -1,5 +1,5 @@
 import { InMemoryNotificationsRepository } from "@test/repositories/in-memory-notifications-repository";
-import { NoticationNotFound } from "./errors/notication-not-found";
+import { NotificationNotFound } from "./errors/notication-not-found";
 import { makeNotification } from "@test/factories/notification-factory";
 import { UnReadNotification } from "./unread-notifications";
 
@@ -29,6 +29,6 @@ describe('UnRead notification', () => {
             return unreadNotification.execute({
                 notificationId: 'fake-notification-id'
             });
-        }).rejects.toThrow(NoticationNotFound);
+        }).rejects.toThrow(NotificationNotFound);
     });
 });

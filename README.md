@@ -103,6 +103,26 @@ $ yarn test:watch
     "recipientId": "string"
   }
 
+### 2. Cancelar notificações
+- **Método**: PTCH
+- **URL**: `/notifications/id/cancel`
+
+### 3. Contador de notificações
+- **Método**: GET
+- **URL**: `/notifications/count/from/:recipientId`
+
+### 4. Consultar de notificações por recipientId
+- **Método**: GET
+- **URL**: `/notifications/from/:recipientId`
+
+### 5. Ler notificações
+- **Método**: PTCH
+- **URL**: `/notifications/id/read`
+
+### 6. Não ler notificações
+- **Método**: PTCH
+- **URL**: `/notifications/id/unread`
+
 ## 🧑🏻‍💻 Autor
 
 Feito com ❤️ por Gelzieny R. Martins 👋🏽 [Entre em contato!](https://www.linkedin.com/in/gelzieny/)

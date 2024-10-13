@@ -1,6 +1,6 @@
 import { InMemoryNotificationsRepository } from "@test/repositories/in-memory-notifications-repository";
 import { CancelNotification } from "./cancel-notification";
-import { NoticationNotFound } from "./errors/notication-not-found";
+import { NotificationNotFound } from "./errors/notication-not-found";
 import { makeNotification } from "@test/factories/notification-factory";
 
 describe('Cancel notification', () => {
@@ -29,6 +29,6 @@ describe('Cancel notification', () => {
             return cancelNotification.execute({
                 notificationId: 'fake-notification-id'
             });
-        }).rejects.toThrow(NoticationNotFound);
+        }).rejects.toThrow(NotificationNotFound);
     });
 });
